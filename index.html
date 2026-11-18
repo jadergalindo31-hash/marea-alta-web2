@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Marea Alta: equipo de buceo y snorkel. Negocio ficticio de demostración.">
+<title>Marea Alta · Equipo de buceo y snorkel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="lock">
+
+<!-- Pantalla de bienvenida -->
+<div id="welcome">
+  <div>
+    <h1>Marea Alta</h1>
+    <p>Equipo de buceo y snorkel para el Caribe colombiano.</p>
+    <button id="enter" class="btn">Entrar a la tienda</button>
+    <small>Negocio ficticio de demostración</small>
+  </div>
+  <svg class="wave" viewBox="0 0 1200 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40Q150 0 300 40T600 40T900 40T1200 40V80H0Z"/></svg>
+</div>
+
+<header class="top">
+  <a class="logo" href="#inicio">Marea<span>Alta</span></a>
+  <nav aria-label="Principal">
+    <a href="#tienda">Tienda</a><a href="#ofertas">Ofertas</a><a href="#nosotros">Nosotros</a><a href="#faq">Preguntas</a><a href="#contacto">Contacto</a>
+  </nav>
+  <div class="acts">
+    <button id="login" class="ghost">Ingresar</button>
+    <button id="cartBtn" class="ghost">Carrito <b id="count">0</b></button>
+  </div>
+</header>
+
+<main>
+<section id="inicio" class="hero">
+  <div>
+    <h2>Todo lo que necesitas para ver más allá de la superficie.</h2>
+    <p>Máscaras, aletas y trajes elegidos por instructores que bucean cada semana en aguas cálidas. Sin relleno, sin sorpresas.</p>
+    <a class="btn" href="#tienda">Ver el catálogo</a>
+    <a class="btn alt" id="waHero" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+  </div>
+  <div class="port" aria-hidden="true">
+    <svg viewBox="0 0 120 120"><rect x="18" y="38" width="84" height="44" rx="20"/><rect x="4" y="57" width="14" height="6"/><rect x="102" y="57" width="14" height="6"/></svg>
+  </div>
+  <svg class="wave" viewBox="0 0 1200 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40Q150 0 300 40T600 40T900 40T1200 40V80H0Z"/></svg>
+</section>
+
+<section id="tienda">
+  <h2>Catálogo</h2>
+  <div class="tools">
+    <input id="q" type="search" placeholder="Buscar producto" aria-label="Buscar producto" maxlength="40">
+    <div id="chips"></div>
+  </div>
+  <div id="grid" class="grid"></div>
+  <p id="none" hidden>No encontramos productos con esa búsqueda.</p>
+</section>
+
+<section id="ofertas" class="dark">
+  <h2>Ofertas y novedades</h2>
+  <div id="deals" class="grid"></div>
+</section>
+
+<section id="nosotros">
+  <div>
+    <h2>Sobre nosotros</h2>
+    <p>Marea Alta nació en 2019 en una caseta de playa, cuando dos instructores de buceo se cansaron de recomendar equipo que se empañaba a los diez minutos. Hoy probamos cada producto en el agua antes de venderlo y lo enviamos a todo el país.</p>
+    <p class="note">Historia inventada para esta demostración.</p>
+  </div>
+  <div>
+    <dl class="biz">
+      <dt>Razón social</dt><dd>Marea Alta S.A.S. (ficticia)</dd>
+      <dt>NIT</dt><dd>900.000.000-0 (ficticio)</dd>
+      <dt>Registro mercantil</dt><dd>Número 00000000 (ficticio)</dd>
+      <dt>Facturación</dt><dd>De demostración; una tienda real debe facturar según la DIAN</dd>
+      <dt>Correo</dt><dd>contacto@mareaalta.example</dd>
+    </dl>
+    <p class="note">Todos estos datos son ficticios. No representan licencias, permisos ni registros reales.</p>
+  </div>
+</section>
+
+<section id="faq" class="dark">
+  <h2>Preguntas frecuentes</h2>
+  <details><summary>¿Cuánto tarda un envío?</summary><p>Entre 3 y 6 días hábiles a todo el país (dato de ejemplo).</p></details>
+  <details><summary>¿Puedo devolver un producto?</summary><p>Sí, si está sin uso y en su empaque. Revisa la política de devoluciones en el pie de página.</p></details>
+  <details><summary>¿Cómo cuido mi máscara?</summary><p>Enjuágala con agua dulce y guárdala en su estuche, lejos del sol directo.</p></details>
+  <details><summary>¿Qué métodos de pago aceptan?</summary><p>Tarjeta, PSE y contra entrega. Son métodos ilustrativos: esta demo no procesa pagos.</p></details>
+</section>
+
+<section id="contacto">
+  <div>
+    <h2>Contacto</h2>
+    <p>Calle 00 # 0-00, Cartagena (dirección ficticia).<br>Lunes a sábado, 9:00 a 18:00.<br>Atención al cliente: contacto@mareaalta.example</p>
+  </div>
+  <form id="cf" novalidate>
+    <label>Nombre<input name="n" maxlength="60" autocomplete="name"></label>
+    <label>Correo<input name="e" type="email" maxlength="100" autocomplete="email"></label>
+    <label>Mensaje<textarea name="m" rows="4" maxlength="500"></textarea></label>
+    <button class="btn">Enviar mensaje</button>
+  </form>
+</section>
+</main>
+
+<footer>
+  <div>
+    <button data-legal="privacidad">Aviso de privacidad</button>
+    <button data-legal="datos">Tratamiento de datos</button>
+    <button data-legal="terminos">Términos y condiciones</button>
+    <button data-legal="devoluciones">Devoluciones y reembolsos</button>
+    <button data-legal="cookies">Cookies</button>
+    <button data-legal="pagos">Pagos y transacciones</button>
+  </div>
+  <p>© 2026 Marea Alta · Sitio de demostración, no es una tienda real. Pagos ilustrativos: tarjeta, PSE, contra entrega.</p>
+</footer>
+
+<a id="wa" class="wa" target="_blank" rel="noopener">WhatsApp</a>
+
+<aside id="cart" aria-label="Carrito de compras">
+  <header><h3>Tu carrito</h3><button id="closeCart" aria-label="Cerrar carrito">×</button></header>
+  <ul id="items"></ul>
+  <div class="tot"><span>Total</span><b id="total">$0</b></div>
+  <button id="checkout" class="btn">Finalizar compra</button>
+</aside>
+<div id="scrim"></div>
+
+<dialog id="modal"><button class="x" id="mx" aria-label="Cerrar">×</button><div id="mbody"></div></dialog>
+<div id="toasts" aria-live="polite"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
